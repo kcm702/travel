@@ -8,8 +8,15 @@ gem 'simple_form'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+# Use the pg gem in production
+group :production do
+	gem 'pg'
+end
 
+# Use the sqlite3 gem in development and testing only
+group :development, :test do
+	gem 'sqlite3'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
