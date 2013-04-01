@@ -1,0 +1,17 @@
+<%= simple_form_for(@accommodation, html: { class: "form-horizontal"}) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :title %>
+    <%= f.input :reservation_number %>
+    <%= f.input :booking_start_date %>
+    <%= f.input :booking_end_date %>
+    <%= f.input :phone %>
+    <%= f.input :price %>
+    <%= f.input :additional_info %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

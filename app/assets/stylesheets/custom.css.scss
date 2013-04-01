@@ -1,0 +1,87 @@
+/*To change font: 
+$baseFontFamily: 'Anaheim';
+@import url(http://fonts.googleapis.com/css?family=Anaheim); */
+
+
+/*Changes color of navbar:*/
+$navbarBackgroundHighlight: #999999;
+$navbarBackground: #999999;
+
+$navbarLinkColor: white;
+/*$btnPrimaryBackground: blue;*/
+
+$baseFontSize: 12px;
+
+@import "bootstrap";
+
+body {
+	padding-top: 60px;
+}
+
+@import "bootstrap-responsive";
+
+.btn-primary {
+	color: white !important;
+}
+
+/* For index colors to label each type */
+.note_label {
+	color: blue;
+}
+.trip_label {
+	color: green;
+}
+.accommodation_label {
+	color: red;
+}
+.hot_spot_label {
+	color: orange;
+}
+.destination_label {
+	color: purple;
+}
+
+/*Navigation styling */
+.nav_header {
+	width: 100%;
+	text-align: center;
+	font-size: 14px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+/* Left navigation - Additional styling */
+.label-important {
+
+}
+
+/* Right navigation - Add New styling */
+
+.btn-success {
+	color: white !important;
+}
+.btn-add {
+	width: 65%;
+}
+.btn-add-acc {
+	width: 35%;
+}
+.btn-add-hsn {
+	width: 20%;
+}
+
+/* Required for jQuery Masonry */
+.box {
+	margin: 5px;
+	padding: 10px;
+	font-size: 12px;
+	line-height: 1.4em;
+	float: left;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	box-shadow: 1px 1px 10px #444;
+	width:214px;
+}
+

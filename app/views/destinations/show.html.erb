@@ -1,0 +1,28 @@
+<div class="row">
+	<div class="span6 offset3">
+		<div class="well">
+
+			<p>
+			  <b>Location:</b>
+			  <%= @destination.location %>
+			</p>
+
+			<p>
+			  <b>Start Date:</b>
+			  <%= @destination.start_date %><br />
+			  <b>End Date:</b>
+			  <%= @destination.end_date %>
+			</p>
+
+			<p>
+				<em>Created by <%= @destination.user.username %></em>
+			</p>
+
+			<% if current_user == @destination.user %>
+				<%= link_to 'Edit', edit_destination_path(@destination) %> |
+				<%= link_to 'Back to Destinations', destinations_path %>
+			<% end %>
+
+		</div>
+	</div>
+</div>

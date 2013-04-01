@@ -1,0 +1,16 @@
+<div class="box">
+	<p><span class="note_label">Note:</span> <b><%= note.subject %></b>
+	</p>
+
+	<p>
+		<%= note.description %>
+	</p>
+
+	<p>
+		<% if current_user == note.user %>
+			<%= link_to 'Show', note %> |
+			<%= link_to 'Edit', edit_note_path(note) %> |
+			<%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %>
+		<% end %>
+	</p>
+</div>

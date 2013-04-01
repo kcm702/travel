@@ -1,0 +1,32 @@
+<div class="box">
+	<p><span class="accommodation_label">Accommodation:</span> <b><%= accommodation.title %></b>
+	</p>
+
+	<p>
+		Reservation #<%= accommodation.reservation_number %>
+	</p>
+
+	<p>
+		<%= accommodation.booking_start_date %> to <%= accommodation.booking_end_date %>
+	</p>
+
+	<p>
+		<%= accommodation.phone %>
+	</P>
+
+	<p>
+		<%= accommodation.price %>
+	</p>
+
+	<p>
+		<%= accommodation.additional_info %>
+	</p>
+
+	<p>
+		<% if current_user == accommodation.user %>
+			<%= link_to 'Show', accommodation %> |
+			<%= link_to 'Edit', edit_accommodation_path(accommodation) %> |
+			<%= link_to 'Destroy', accommodation, method: :delete, data: { confirm: 'Are you sure?' } %>
+		<% end %>
+	</p>
+</div>

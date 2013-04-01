@@ -1,0 +1,16 @@
+<div class="box">
+	<p><span class="destination_label">Destination:</span> <b><%= destination.location %></b>
+	</p>
+
+	<p>
+		<b>Dates:</b> <%= destination.start_date %> to <%= destination.end_date %>
+	</p>
+
+	<p>
+		<% if current_user == destination.user %>
+			<%= link_to 'Show', destination %> |
+			<%= link_to 'Edit', edit_destination_path(destination) %> |
+			<%= link_to 'Destroy', destination, method: :delete, data: { confirm: 'Are you sure?' } %>
+		<% end %>
+	</p>
+</div>

@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="span6 offset3">
+    <div class="well">
+
+      <p>
+        <b>Title:</b>
+        <%= @accommodation.title %>
+      </p>
+
+      <p>
+        <b>Reservation #</b><%= @accommodation.reservation_number %>
+      </p>
+
+      <p>
+        <b>Booking start date:</b>
+        <%= @accommodation.booking_start_date %>
+      </p>
+
+      <p>
+        <b>Booking end date:</b>
+        <%= @accommodation.booking_end_date %>
+      </p>
+
+      <p>
+        <b>Phone:</b>
+        <%= @accommodation.phone %>
+      </p>
+
+      <p>
+        <b>Price:</b>
+        <%= @accommodation.price %>
+      </p>
+
+      <p>
+        <b>Additional info:</b>
+        <%= @accommodation.additional_info %>
+      </p>
+
+      <p>
+        <em>Created by <%= @accommodation.user.username %></em>
+      </p>
+
+      <p>
+        <% if current_user == @accommodation.user %>
+        <%= link_to 'Edit', edit_accommodation_path(@accommodation) %> |
+        <%= link_to 'Back to Accommodations', accommodations_path %>
+        <% end %>
+      </p>
+
+    </div>
+  </div>
+</div>

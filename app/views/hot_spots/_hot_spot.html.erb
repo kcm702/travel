@@ -1,0 +1,47 @@
+<div class="box">
+	<p><span class="hot_spot_label">Hot Spot:</span> <b><%= hot_spot.title %></b>
+      </p>
+
+      <p>
+        <b>Category:</b>
+        <%= hot_spot.category %>
+      </p>
+
+      <p>
+        <b>Address:</b>
+        <%= hot_spot.address %>
+      </p>
+
+      <p>
+        <b>Phone:</b>
+        <%= hot_spot.phone %>
+      </p>
+
+      <p>
+        <b>Hours:</b>
+        <%= hot_spot.hours %>
+      </p>
+
+      <p>
+        <b>Description:</b>
+        <%= hot_spot.description %>
+      </p>
+
+      <p>
+        <b>Link:</b>
+        <%= hot_spot.link %>
+      </p>
+
+      <p>
+        <b>Other:</b>
+        <%= hot_spot.other %>
+      </p>
+
+	<p>
+		<% if current_user == hot_spot.user %>
+			<%= link_to 'Show', hot_spot %> |
+			<%= link_to 'Edit', edit_hot_spot_path(hot_spot) %> |
+			<%= link_to 'Destroy', hot_spot, method: :delete, data: { confirm: 'Are you sure?' } %>
+		<% end %>
+	</p>
+</div>

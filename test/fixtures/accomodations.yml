@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  reservation_number: MyString
+  booking_start_date: 2013-03-25
+  booking_end_date: 2013-03-25
+  phone: MyString
+  price: MyString
+  additional_info: MyString
+
+two:
+  title: MyString
+  reservation_number: MyString
+  booking_start_date: 2013-03-25
+  booking_end_date: 2013-03-25
+  phone: MyString
+  price: MyString
+  additional_info: MyString

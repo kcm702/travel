@@ -1,0 +1,10 @@
+<h1>Users#show</h1>
+
+<%= simple_form_for(@current_user, html: { class: "form-horizontal"}) do |f| %>
+  <%= f.error_notification %>
+  
+<p>
+	<%f.label :trip %><br/>
+	<%f.collection_select :trip_id, @mytrips, :current_user, :description, :prompt => "Select a trip" %>
+</p>
+<% end %>
