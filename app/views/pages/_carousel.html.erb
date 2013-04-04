@@ -1,0 +1,62 @@
+ <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+          <%= image_tag("130404_lighthouse_3072x2304.jpg", alt: "Lighthouse") %>
+          <div class="container">
+            <div class="carousel-caption">
+
+              <% if user_signed_in? %>
+              <h1>Welcome back, <%= current_user.username %>!</h1>
+
+              <% else %>
+              <h1>Where will you go?</h1>
+              <p class="lead">Welcome to On Our Way, a central place<br />to help organize your next trip.</p>
+              <%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
+
+              <% end %>
+
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <%= image_tag("130404_glacier_3072x2304.jpg", alt: "Glacier") %>
+          <div class="container">
+            <div class="carousel-caption">
+
+              <% if user_signed_in? %>
+              <h1>Let's start planning your next trip!</h1>
+              <%= link_to "Add Trip", new_trip_path, class: "btn btn-primary btn-large" %>
+
+              <% else %>
+              <h1>What will you do?</h1>
+              <p class="lead">Welcome to On Our Way, a central place<br />to help organize your next trip.</p>
+              <%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
+
+              <% end %>
+
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <%= image_tag("130404_camping_3072x2304.jpg", alt: "Camping") %>
+          <div class="container">
+            <div class="carousel-caption">
+
+              <% if user_signed_in? %>
+              <h1>View what you've already curated!</h1>
+              <%= link_to "View Trips", trips_path, class: "btn btn-primary btn-large" %>
+
+              <% else %>
+              <h1>On Our Way can help.</h1>
+              <p class="lead">Welcome to On Our Way, a central place<br />to help organize your next trip.</p>
+              <%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
+
+              <% end %>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div><!-- /.carousel -->

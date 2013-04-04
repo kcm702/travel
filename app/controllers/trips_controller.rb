@@ -81,16 +81,17 @@ class TripsController < ApplicationController
       format.json { head :no_content }
     end
   end
-end
 
-# GET /trips/1
-# GET /trips/1.json
-def test 
-   @trips = current_user.trips.all
-   @trips_description = current_user.trips.all.find(params[:description])
+  # GET /trips/1
+  # GET /trips/1.json
+  def test 
+    @trips = current_user.trips.all
 
     respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @trip }
+      format.html # index.html.erb
+      format.json { render json: @trips }
     end
   end
+
+end
+

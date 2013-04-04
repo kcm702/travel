@@ -1,5 +1,5 @@
-trip list
+<%= @count %>
 
-<% if current_user == trip.user %>
-	<%= trip.description %>
-<% end %>
+<%= Trip.accessible_attributes %>
+
+<%= Trip.last.description %>
