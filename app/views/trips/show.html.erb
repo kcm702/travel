@@ -6,6 +6,13 @@
 			  <b>Description:</b>
 			  <%= @trip.description %>
 			</p>
+			
+				<p><%= @trip.start_date %> 
+					<% if @trip.start_date != nil && @trip.end_date != nil %>
+					to <% end %>
+					<%= @trip.end_date %>
+				</p>
+			
 			<p>
 				<em>Trip curated by <%= @trip.user.username %></em>
 			</p>

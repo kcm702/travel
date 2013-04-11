@@ -11,6 +11,7 @@
 <div class="container-fluid">
 <%= render 'layouts/header' %>
 
+<% if current_page?(root_url) %>
 	<div class="row-fluid">
 
 		<div class="span8">
@@ -22,12 +23,13 @@
 		</div>
 
 	</div>
+<% end %>
 
 	<div class="row-fluid">
 
 			<% flash.each do |name,msg| %>
 			<%= content_tag(:div, msg, class: "alert alert-#{name}") %>
-			<% end %>
+			<% end %> 
 
 			<%= yield %>
 

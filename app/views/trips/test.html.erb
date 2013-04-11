@@ -1,9 +1,10 @@
 <p>Test for non partial. Different folder.</p>
 
 <p>
-Trip names: <%= render 'trips/trip_list' %>
-</p>
-
+<b>Trip names:</b><br />
+	<% @trips.each do |trip| %>
+	<%= trip.description %><br />
+	<% end %>
 <p>
 	<%= current_user.trips.find(4).description %>
 </p>

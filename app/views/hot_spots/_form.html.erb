@@ -10,6 +10,7 @@
     <%= f.input :description %>
     <%= f.input :link %>
     <%= f.input :other %>
+    <%= f.association :trip, collection: current_user.trips.all, label_method: :description %>
   </div>
 
   <div class="form-actions">

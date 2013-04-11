@@ -13,5 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.masonry.min.js
+//= require modernizr.custom.29473.js
 //= require bootstrap
 //= require_tree .

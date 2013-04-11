@@ -3,6 +3,7 @@
 
   <div class="form-inputs">
     <%= f.input :location %>
+    <%= f.input :trip, collection: [ "to", "come" ], prompt: "Associated Trip" %>
     <%= f.input :start_date %>
     <%= f.input :end_date %>
   </div>

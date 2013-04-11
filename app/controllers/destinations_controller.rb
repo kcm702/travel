@@ -4,6 +4,7 @@ class DestinationsController < ApplicationController
   # GET /destinations.json
   def index
     @destinations = current_user.destinations.all
+    @trips = current_user.trips
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,7 +15,7 @@ class DestinationsController < ApplicationController
   # GET /destinations/1
   # GET /destinations/1.json
   def show
-    @destination = current_user.destinations.find(params[:id])
+    @destination = current_user.destinations.get(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -26,6 +27,8 @@ class DestinationsController < ApplicationController
   # GET /destinations/new.json
   def new
     @destination = current_user.destinations.new
+    @trip = current_user.trips
+    
 
     respond_to do |format|
       format.html # new.html.erb

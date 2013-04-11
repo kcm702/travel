@@ -2,6 +2,7 @@ class NotesController < ApplicationController
   before_filter :authenticate_user!
   # GET /notes
   # GET /notes.json
+
   def index
     @notes = current_user.notes.all
 
@@ -15,7 +16,10 @@ class NotesController < ApplicationController
   # GET /notes/1.json
   def show
     @note = current_user.notes.find(params[:id])
-
+    @trip_idn = @note.trip_id
+    @trip = current_user.trips.find(@trip_idn)
+    @trip_description = current_user.trips.find(@trip_idn).description
+    
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @note }
@@ -26,6 +30,7 @@ class NotesController < ApplicationController
   # GET /notes/new.json
   def new
     @note = current_user.notes.new
+    @trips = current_user.trips
 
     respond_to do |format|
       format.html # new.html.erb

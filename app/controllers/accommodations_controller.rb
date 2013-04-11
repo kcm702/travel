@@ -15,6 +15,9 @@ class AccommodationsController < ApplicationController
   # GET /accommodations/1.json
   def show
     @accommodation = current_user.accommodations.find(params[:id])
+    @trip_idn = @accommodation.trip_id
+    @trip = current_user.trips.find(@trip_idn)
+    @trip_description = current_user.trips.find(@trip_idn).description
 
     respond_to do |format|
       format.html # show.html.erb

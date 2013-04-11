@@ -43,7 +43,8 @@
       </p>
 
       <p>
-        <em>Created by <%= @hot_spot.user.username %></em>
+        <em>Associated with <b><%= link_to @trip_description, @trip %></b><br />
+          Created by <%= @hot_spot.user.username %></em>
       </p>
 
       <p>

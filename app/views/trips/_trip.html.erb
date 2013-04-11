@@ -1,6 +1,10 @@
 <div class="box">
 	<p><span class="trip_label">Trip:</span> <b><%= trip.description %></b>
 	</p>
+	<p><%= trip.start_date %>
+		<% if trip.start_date != nil && trip.end_date != nil %> to <% end %>
+		<%= trip.end_date %>
+	</p>
 	<p>
 		<% if current_user == trip.user %>
 			<%= link_to 'Show', trip %> |

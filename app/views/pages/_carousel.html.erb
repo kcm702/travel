@@ -1,7 +1,7 @@
  <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
         <div class="item active">
-          <%= image_tag("130404_lighthouse_3072x2304.jpg", alt: "Lighthouse") %>
+          <%= image_tag("130410_lighthouse_1920x1080.jpg", alt: "Lighthouse") %>
           <div class="container">
             <div class="carousel-caption">
 
@@ -19,7 +19,7 @@
           </div>
         </div>
         <div class="item">
-          <%= image_tag("130404_glacier_3072x2304.jpg", alt: "Glacier") %>
+          <%= image_tag("130410_farm_1920x1080.jpg", alt: "Farm") %>
           <div class="container">
             <div class="carousel-caption">
 
@@ -38,12 +38,12 @@
           </div>
         </div>
         <div class="item">
-          <%= image_tag("130404_camping_3072x2304.jpg", alt: "Camping") %>
+          <%= image_tag("130410_glacier_1920x1080.jpg", alt: "Glacier") %>
           <div class="container">
             <div class="carousel-caption">
 
               <% if user_signed_in? %>
-              <h1>View what you've already curated!</h1>
+              <h1>Or view what you've already curated!</h1>
               <%= link_to "View Trips", trips_path, class: "btn btn-primary btn-large" %>
 
               <% else %>

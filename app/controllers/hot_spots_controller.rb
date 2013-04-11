@@ -15,6 +15,9 @@ class HotSpotsController < ApplicationController
   # GET /hot_spots/1.json
   def show
     @hot_spot = current_user.hot_spots.find(params[:id])
+    @trip_idn = @hot_spot.trip_id
+    @trip = current_user.trips.find(@trip_idn)
+    @trip_description = current_user.trips.find(@trip_idn).description
 
     respond_to do |format|
       format.html # show.html.erb

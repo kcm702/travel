@@ -9,12 +9,14 @@ Travel::Application.routes.draw do
   resources :trips
 
   devise_for :users
+  match 'users/:id' => 'users#show', as: :user
 
   #get "pages/about"
 
   root :to => 'pages#home'
   get "about" => 'pages#about'
   get "all" => 'users#show'
+
   
 
   # The priority is based upon order of creation:

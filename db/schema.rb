@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130329234600) do
+ActiveRecord::Schema.define(:version => 20130408013005) do
 
   create_table "accommodations", :force => true do |t|
     t.string   "title"
@@ -24,8 +24,10 @@ ActiveRecord::Schema.define(:version => 20130329234600) do
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
     t.integer  "user_id"
+    t.integer  "trip_id"
   end
 
+  add_index "accommodations", ["trip_id"], :name => "index_accommodations_on_trip_id"
   add_index "accommodations", ["user_id"], :name => "index_accommodations_on_user_id"
 
   create_table "destinations", :force => true do |t|
@@ -51,8 +53,10 @@ ActiveRecord::Schema.define(:version => 20130329234600) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.integer  "user_id"
+    t.integer  "trip_id"
   end
 
+  add_index "hot_spots", ["trip_id"], :name => "index_hot_spots_on_trip_id"
   add_index "hot_spots", ["user_id"], :name => "index_hot_spots_on_user_id"
 
   create_table "notes", :force => true do |t|
@@ -61,8 +65,10 @@ ActiveRecord::Schema.define(:version => 20130329234600) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.integer  "user_id"
+    t.integer  "trip_id"
   end
 
+  add_index "notes", ["trip_id"], :name => "index_notes_on_trip_id"
   add_index "notes", ["user_id"], :name => "index_notes_on_user_id"
 
   create_table "trips", :force => true do |t|
@@ -70,6 +76,8 @@ ActiveRecord::Schema.define(:version => 20130329234600) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.integer  "user_id"
+    t.date     "start_date"
+    t.date     "end_date"
   end
 
   add_index "trips", ["user_id"], :name => "index_trips_on_user_id"
