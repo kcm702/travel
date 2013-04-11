@@ -12,8 +12,9 @@
 <%= render 'layouts/header' %>
 
 <% if current_page?(root_url) %>
+	
 	<div class="row-fluid">
-
+		
 		<div class="span8">
 			<%= render 'layouts/left_nav' %>
 		</div>
@@ -21,8 +22,9 @@
 		<div class="span4">
 			<%= render 'layouts/right_nav' %>
 		</div>
-
+		
 	</div>
+
 <% end %>
 
 	<div class="row-fluid">

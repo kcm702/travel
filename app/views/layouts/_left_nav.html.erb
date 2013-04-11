@@ -1,23 +1,37 @@
 <span class="label label-inverse nav_header">MY VIEW</span>
 
-<p>
-	<span class="lead">Trips</span>
-	<% @trips.each do |trip| %>
-		<span class="btn btn-nav btn-primary">
-			<%= link_to trip.description, trip %>
-		</span>
-	<% end %>
-</p>
+<% if user_signed_in? %>
 
-<p>
-	<span class="lead">Type</span>
-	<span class="btn btn-nav btn-info">
-		<%= link_to "Accommodations", accommodations_path %>
-	</span> 
-	<span class="btn btn-nav btn-info">
-		<%= link_to "Hot Spots", hot_spots_path %>
-	</span>
-	<span class="btn btn-nav btn-info">
-		<%= link_to "Notes", notes_path %>
-	</span>
-</p>
+	<% @trips = current_user.trips %>
+
+    <% @trips.each do |trip| %>
+    <% trip.description %>
+  	<% end %>
+
+	<p>
+		<span class="lead">Trips</span>
+			<% @trips.each do |trip| %>
+			<span class="btn btn-nav btn-primary">
+				<%= link_to trip.description, trip %>
+			</span>
+			<% end %>
+	</p>
+
+	<p>
+		<span class="lead">Type</span>
+		<span class="btn btn-nav btn-info">
+			<%= link_to "Accommodations", accommodations_path %>
+		</span> 
+		<span class="btn btn-nav btn-info">
+			<%= link_to "Hot Spots", hot_spots_path %>
+		</span>
+		<span class="btn btn-nav btn-info">
+			<%= link_to "Notes", notes_path %>
+		</span>
+	</p>
+
+<% else %>
+
+	<p>Please <%= link_to "create an account", new_user_registration_path %> to get started or <%= link_to "sign in", new_user_session_path %>.</p>
+
+<% end %>
