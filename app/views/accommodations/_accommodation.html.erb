@@ -3,7 +3,9 @@
 	</p>
 
 	<p>
-		<b>Reservation #</b> <%= accommodation.reservation_number %>
+		<% if !accommodation.reservation_number.empty? %>
+			<b>Reservation #</b> <%= accommodation.reservation_number %>
+		<% end %>
 	</p>
 
 	<p>
@@ -11,15 +13,21 @@
 	</p>
 
 	<p>
-		<b>Phone:</b> <%= accommodation.phone %>
+		<% if !accommodation.phone.empty? %>
+			<b>Phone:</b> <%= accommodation.phone %>
+		<% end %>
 	</P>
 
 	<p>
-		<b>Price:</b> <%= accommodation.price %>
+		<% if !accommodation.price.empty? %>
+			<b>Price:</b> <%= accommodation.price %>
+		<% end %>
 	</p>
 
 	<p>
-		<b>Other:</b> <%= accommodation.additional_info %>
+		<% if !accommodation.additional_info.empty? %>
+			<b>Other:</b> <%= accommodation.additional_info %>
+		<% end %>
 	</p>
 
 	<p>

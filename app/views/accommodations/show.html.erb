@@ -8,32 +8,35 @@
       </p>
 
       <p>
-        <b>Reservation #</b><%= @accommodation.reservation_number %>
+        <% if !@accommodation.reservation_number.empty? %>
+          <b>Reservation #</b><%= @accommodation.reservation_number %>
+        <% end %>
       </p>
 
       <p>
-        <b>Booking start date:</b>
-        <%= @accommodation.booking_start_date %>
+        <b>Dates:</b>
+            <%= @accommodation.booking_start_date %>  to <%= @accommodation.booking_end_date %>
       </p>
 
       <p>
-        <b>Booking end date:</b>
-        <%= @accommodation.booking_end_date %>
+        <% if !@accommodation.phone.empty? %>
+          <b>Phone:</b>
+          <%= @accommodation.phone %>
+        <% end %>
       </p>
 
       <p>
-        <b>Phone:</b>
-        <%= @accommodation.phone %>
+        <% if !@accommodation.price.empty? %>
+          <b>Price:</b>
+          <%= @accommodation.price %>
+        <% end %>
       </p>
 
       <p>
-        <b>Price:</b>
-        <%= @accommodation.price %>
-      </p>
-
-      <p>
-        <b>Additional info:</b>
-        <%= @accommodation.additional_info %>
+        <% if !@accommodation.additional_info.empty? %>
+          <b>Additional info:</b>
+          <%= @accommodation.additional_info %>
+        <% end %>
       </p>
 
       <p>

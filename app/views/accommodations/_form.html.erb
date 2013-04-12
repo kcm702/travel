@@ -8,7 +8,7 @@
     <%= f.input :booking_end_date %>
     <%= f.input :phone %>
     <%= f.input :price %>
-    <%= f.input :additional_info %>
+    <%= f.input :additional_info, as: :text, input_html: { rows: '3'} %>
     <%= f.association :trip, collection: current_user.trips.all, label_method: :description %>
   </div>
 

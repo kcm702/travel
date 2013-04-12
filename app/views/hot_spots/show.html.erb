@@ -8,38 +8,52 @@
       </p>
 
       <p>
-        <b>Category:</b>
-        <%= @hot_spot.category %>
+        <% if !@hot_spot.category.empty? %>
+          <b>Category:</b>
+          <%= @hot_spot.category %>
+        <% end %>
       </p>
 
       <p>
-        <b>Address:</b>
-        <%= @hot_spot.address %>
+        <% if !@hot_spot.address.empty? %>
+          <b>Address:</b>
+          <%= @hot_spot.address %>
+        <% end %>
       </p>
 
       <p>
-        <b>Phone:</b>
-        <%= @hot_spot.phone %>
+        <% if !@hot_spot.phone.empty? %>
+          <b>Phone:</b>
+          <%= @hot_spot.phone %>
+        <% end %>
       </p>
 
       <p>
-        <b>Hours:</b>
-        <%= @hot_spot.hours %>
+        <% if !@hot_spot.hours.empty? %>
+          <b>Hours:</b>
+          <%= @hot_spot.hours %>
+        <% end %>
       </p>
 
       <p>
-        <b>Description:</b>
-        <%= @hot_spot.description %>
+        <% if !@hot_spot.description.empty? %>
+          <b>Description:</b>
+          <%= @hot_spot.description %>
+        <% end %>
       </p>
 
       <p>
-        <b>Link:</b>
-        <%= @hot_spot.link %>
+        <% if !@hot_spot.link.empty? %>
+          <b>Link:</b>
+          <%= @hot_spot.link %>
+        <% end %>
       </p>
 
       <p>
-        <b>Other:</b>
-        <%= @hot_spot.other %>
+        <% if !@hot_spot.other.empty? %>
+          <b>Other:</b>
+          <%= @hot_spot.other %>
+        <% end %>
       </p>
 
       <p>
