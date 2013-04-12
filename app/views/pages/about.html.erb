@@ -1,2 +1,13 @@
-<h1>Pages#about</h1>
-<p>Find me in app/views/pages/about.html.erb</p>
+<div class="row">
+	<div class="span6 offset3">
+		<div class="well">
+			<h1>About</h1>
+				<p>On Our Way is a central place to help organize your next trip.</p>
+				<p>Add your upcoming trips, and then add accommodations, hot spots and notes to each trip.</p>
+				<p>So <em>where will you go?</em> And, <em>what will you do?</em> Let <b>On Our Way</b> help!</p>
+				<% if !user_signed_in? %>
+				<%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
+				<% end %>
+		</div>
+	</div>
+</div>
