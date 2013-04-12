@@ -3,6 +3,6 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 jQuery ->
-	$(document).ready ->
+	$(window).load ->
 		$('#container').masonry itemSelector: ".box" 
 		columnWidth: 240

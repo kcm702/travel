@@ -16,8 +16,7 @@ Travel::Application.routes.draw do
   root :to => 'pages#home'
   get "about" => 'pages#about'
   get "all" => 'users#show'
-
-  
+   
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -10,6 +10,9 @@
 
 	<p>
 		<span class="lead">Trips</span>
+			<span class="btn btn-nav btn-success">
+				<%= link_to "All Trips", trips_path %>
+			</span>
 			<% @trips.each do |trip| %>
 			<span class="btn btn-nav btn-primary">
 				<%= link_to trip.description, trip %>
@@ -19,6 +22,9 @@
 
 	<p>
 		<span class="lead">Type</span>
+		<span class="btn btn-nav btn-success">
+			<%= link_to "All Types", all_path %>
+		</span>
 		<span class="btn btn-nav btn-info">
 			<%= link_to "Accommodations", accommodations_path %>
 		</span> 
