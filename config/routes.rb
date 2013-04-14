@@ -1,6 +1,7 @@
 Travel::Application.routes.draw do
   
   get "trips/test"
+  get "users/filter"
 
   resources :hot_spots
   resources :notes

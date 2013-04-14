@@ -10,8 +10,11 @@
 			<p>
 				<b>Dates:</b>
 				<%= @trip.start_date %> to <%= @trip.end_date %>
+			</p>					
+			<p>
+				<em><b>
+				Associated Accommodations (<%= @accommodations_count %>), Associated Hot Spots (<%= @hot_spots_count %>), Associated Notes (<%= @notes_count %>)</b></em>
 			</p>
-						
 			<p>
 				<em>Trip curated by <%= @trip.user.username %></em>
 			</p>
@@ -23,4 +26,9 @@
 
 		</div>
 	</div>
+</div>
+<div id="container" >
+	<%= render @accommodations %>
+	<%= render @hot_spots %>
+	<%= render @notes %>	
 </div>

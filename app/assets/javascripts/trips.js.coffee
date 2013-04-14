@@ -6,7 +6,3 @@ jQuery ->
 	$(document).ready ->
 		$('#container').masonry itemSelector: ".box" 
 		columnWidth: 240
-
-jQuery ->
-	$(document).ready ->
-		$('.ff-container').modernizr itemSelector: ".filter-selected" 

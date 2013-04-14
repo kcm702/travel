@@ -15,6 +15,12 @@ class TripsController < ApplicationController
   # GET /trips/1.json
   def show
     @trip = current_user.trips.find(params[:id])
+    @accommodations = current_user.accommodations.where(:trip_id => @trip.id)
+    @accommodations_count= current_user.accommodations.where(:trip_id => @trip.id).count
+    @hot_spots = current_user.hot_spots.where(:trip_id => @trip.id)
+    @hot_spots_count= current_user.hot_spots.where(:trip_id => @trip.id).count
+    @notes = current_user.notes.where(:trip_id => @trip.id)
+    @notes_count= current_user.notes.where(:trip_id => @trip.id).count
         
     respond_to do |format|
       format.html # show.html.erb
