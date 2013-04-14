@@ -5,7 +5,7 @@ class NotesController < ApplicationController
 
   def index
     @notes = current_user.notes.all
-
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @notes }

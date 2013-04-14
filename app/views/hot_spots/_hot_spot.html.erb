@@ -50,6 +50,10 @@
           <%= hot_spot.other %>
         <% end %>
       </p>
+      <p>
+        <% trip_idn = current_user.trips.find(hot_spot.trip_id) %>
+        <em>Associated with <b><%= link_to  current_user.trips.find(trip_idn).description, trip_idn %></b></em>
+      </p>
 
 	<p>
 		<% if current_user == hot_spot.user %>

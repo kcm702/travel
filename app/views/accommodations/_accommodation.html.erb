@@ -29,6 +29,10 @@
 			<b>Other:</b> <%= accommodation.additional_info %>
 		<% end %>
 	</p>
+	<p>
+		<% trip_idn = current_user.trips.find(accommodation.trip_id) %>
+		<em>Associated with <b><%= link_to current_user.trips.find(trip_idn).description, trip_idn %></b></em>
+	</p>
 
 	<p>
 		<% if current_user == accommodation.user %>
