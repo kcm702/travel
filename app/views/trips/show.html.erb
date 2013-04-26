@@ -11,9 +11,11 @@
 				<b>Dates:</b>
 				<%= @trip.start_date %> to <%= @trip.end_date %>
 			</p>					
-			<p>
-				<em><b>
-				Associated Accommodations (<%= @accommodations_count %>), Associated Hot Spots (<%= @hot_spots_count %>), Associated Notes (<%= @notes_count %>)</b></em>
+			<p><b>Display:</b><br />
+				<label><input type="checkbox" id="TypeAccommodation"><em> Associated Accommodations (<%= @accommodations_count %>),</em></label>
+				<label><input type="checkbox" id="TypeHot_Spot"><em> Associated Hot Spots (<%= @hot_spots_count %>),</em></label>
+				<label><input type="checkbox" id="TypeNote"><em> Associated Notes (<%= @notes_count %>)</em></label>
+			
 			</p>
 			<p>
 				<em>Trip curated by <%= @trip.user.username %></em>
@@ -27,8 +29,17 @@
 		</div>
 	</div>
 </div>
-<div id="container" >
-	<%= render @accommodations %>
-	<%= render @hot_spots %>
-	<%= render @notes %>	
+<div id="container">
+	<div class="type_accommodation" style="display:none">
+		<%= render @accommodations %>
+	</div>
+
+	<div class="type_hot_spot" style="display:none">
+		<%= render @hot_spots %>
+	</div>
+	
+	<div class="type_note" style="display:none">
+		<%= render @notes %>
+	</div>
+	
 </div>
