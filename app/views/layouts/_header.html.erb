@@ -21,6 +21,17 @@
 			</ul>
 			<ul class="nav pull-right">
 	    		<% if user_signed_in? %>
+	    			<li class="dropdown">
+	    				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Add
+	    					<b class="caret"></b>
+	    				</a>
+	    				<ul class="dropdown-menu add_new">
+		    				<li><%= link_to "New Trip", new_trip_path %></li>
+		    				<li><%= link_to "New Accommodation", new_accommodation_path %></li>
+		    				<li><%= link_to "New Hot Spot", new_hot_spot_path %></li>
+		    				<li><%= link_to "New Note", new_note_path %></li>
+	    				</ul>
+	    			</li>
 					<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
 				<% else %>
 					<li><%= link_to "Sign In", new_user_session_path %></li>

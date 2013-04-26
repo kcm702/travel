@@ -1,4 +1,4 @@
-<span class="label label-inverse nav_header">MY VIEW</span>
+<span class="label label-inverse nav_header">MY TRIPS</span>
 
 <% if user_signed_in? %>
 
@@ -9,30 +9,34 @@
   	<% end %>
 
 	<p>
-		<span class="lead">Trips</span>
-			<span class="btn btn-nav btn-success">
-				<%= link_to "All Trips", trips_path %>
-			</span>
-			<% @trips.each do |trip| %>
-			<span class="btn btn-nav btn-primary">
-				<%= link_to trip.description, trip %>
-			</span>
-			<% end %>
+		<!--<span class="lead">Trips</span>-->
+		
+		<span class="btn btn-nav btn-success btn-block">
+			<%= link_to "All Trips", trips_path %>
+		</span>
+		
+		<% @trips.each do |trip| %>
+		<span class="btn btn-nav btn-primary btn-block">
+			<%= link_to trip.description, trip %>
+		</span>
+		
+		<% end %>
+
 	</p>
 
 	<p>
-		<span class="lead">Type</span>
-		<span class="btn btn-nav btn-success">
+		<!--<span class="lead">Type</span>-->
+		<span class="btn btn-nav btn-success btn-block">
 			<%= link_to "All Types", all_path %>
 		</span>
-		<span class="btn btn-nav btn-info">
-			<%= link_to "Accommodations", accommodations_path %>
+		<span class="btn btn-nav btn-info btn-block">
+			<%= link_to "All Accommodations", accommodations_path %>
 		</span> 
-		<span class="btn btn-nav btn-info">
-			<%= link_to "Hot Spots", hot_spots_path %>
+		<span class="btn btn-nav btn-info btn-block">
+			<%= link_to "All Hot Spots", hot_spots_path %>
 		</span>
-		<span class="btn btn-nav btn-info">
-			<%= link_to "Notes", notes_path %>
+		<span class="btn btn-nav btn-info btn-block">
+			<%= link_to "All Notes", notes_path %>
 		</span>
 	</p>
 

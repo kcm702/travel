@@ -66,20 +66,14 @@ body {
 .lead {
   color: red;
 }
+.add_new {
+  padding: 5px;
+}
 
 /* Right navigation - Add New styling */
 
 .btn-success {
 	color: white !important;
-}
-.btn-add {
-	width: 65%;
-}
-.btn-add-acc {
-	width: 35%;
-}
-.btn-add-hsn {
-	width: 20%;
 }
 
 /* Required for jQuery Masonry */
@@ -138,6 +132,7 @@ body {
       max-width: 550px;
       padding: 0 20px;
       margin-top: 200px;
+      margin-left: 80px;
     }
     .carousel-caption h1,
     .carousel-caption .lead {
@@ -148,50 +143,4 @@ body {
     }
     .carousel-caption .btn {
       margin-top: 10px;
-    }
-
-/* Filter */
-
-.b-filter-meta {
-    position: fixed;
-    top: 0;
-    left: -99px;
-    }
-
-
-.b-filter-meta#TypeAccommodation:checked ~ .b-list > .b-list-item_accommodation,
-.b-filter-meta#TypeHot_Spot:checked ~ .b-list > .b-list-item_hot_spot,
-.b-filter-meta#TypeNote:checked ~ .b-list > .b-list-item_note, {
-    opacity: 1;
-    }
-
-.b-filter-meta#TypeAccommodation:checked ~ .b-filter-controls .b-filter-label[for=TypeAccommodation],
-.b-filter-meta#TypeHot_Spot:checked ~ .b-filter-controls .b-filter-label[for=TypeHot_Spot],
-.b-filter-meta#TypeNote:checked ~ .b-filter-controls .b-filter-label[for=TypeNote],{
-    color: #333;
-    background: rgba(0,0,0,0.2);
-    box-shadow: 0 1px 1px rgba(0,0,0,0.6);
-    }
-
-.b-filter-meta#TypeAccommodation:checked ~ .b-filter-controls .b-filter-label[for=TypeAccommodation]:before,
-.b-filter-meta#TypeHot_Spot:checked ~ .b-filter-controls .b-filter-label[for=TypeHot_Spot]:before,
-.b-filter-meta#TypeNote:checked ~ .b-filter-controls .b-filter-label[for=TypeNote]:before, {
-        box-shadow: 0 -1px 1px rgba(0,0,0,0.8);
-        }
-
-.b-filter-meta#TypeAccommodation:checked ~ .b-filter-controls .b-filter-label[for=TypeAccommodation]:after,
-.b-filter-meta#TypeHot_Spot:checked ~ .b-filter-controls .b-filter-label[for=TypeHot_Spot]:after,
-.b-filter-meta#TypeNote:checked ~ .b-filter-controls .b-filter-label[for=TypeNote]:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-
-    width: 7px;
-    height: 7px;
-    margin: 0 0 -4px -3px;
-
-    background: #A3A3A3;
-
-    transform: rotate(-45deg);
     }
