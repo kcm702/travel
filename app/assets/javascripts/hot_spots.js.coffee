@@ -6,3 +6,9 @@ jQuery ->
 	$(document).ready ->
 		$('#container').masonry itemSelector: ".box" 
 		columnWidth: 240
+
+	$("#TypeHot_Spot").click ->
+ 		$(".type_hot_spot").toggle @checked
+ 		$(document).ready ->
+			$('#container').masonry itemSelector: ".box" 
+			columnWidth: 240

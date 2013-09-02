@@ -6,3 +6,9 @@ jQuery ->
 	$(document).ready ->
 		$('#container').masonry itemSelector: ".box" 
 		columnWidth: 240
+
+	$("#TypeNote").click ->
+ 		 $(".type_note").toggle @checked
+ 		 $(document).ready ->
+			$('#container').masonry itemSelector: ".box" 
+			columnWidth: 240

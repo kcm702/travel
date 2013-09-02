@@ -1,5 +1,11 @@
 <div class="row">
+
+	<% if user_signed_in? %>
+	<div class="span6 offset1">
+	<% else %>
 	<div class="span6 offset3">
+	<% end %>
+	
 		<div class="well">
 			<h1>About</h1>
 				<p>On Our Way is a central place to help organize your next trip.</p>
